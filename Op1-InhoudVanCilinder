@@ -1,0 +1,40 @@
+float pi = 3.14;
+float diameter;
+float height;
+ 
+void setup() {
+  Serial.begin(9600);   
+   
+}
+ 
+void loop() {
+  
+  Serial.println("We are going to calculate a cylinder");
+  Serial.print("Please enter the diameter = ");
+  while (Serial.available()==0) {             //Wait for user input
+  
+  }
+  diameter = Serial.parseFloat(); //Read user input into myName
+  Serial.println(diameter);
+
+  Serial.print("Please enter the height = ");        //Prompt User for input
+  while (Serial.available()==0)  {
+  
+  }
+  height = Serial.parseFloat();
+  Serial.println(height);
+ 
+
+  float volume = pi * (diameter / 2) * (diameter / 2) * height;
+  Serial.print("Pi = ");
+  Serial.println(pi);
+  Serial.print("Diameter = ");
+  Serial.println(diameter);
+  Serial.print("Height = ");
+  Serial.println(height);
+  Serial.println("Mass = pi * diameter² * height");
+  Serial.print("Mass = ");
+  Serial.println(volume);
+
+  Serial.end();
+}
